@@ -1,114 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto:wght@300&display=swap');
-
-*{
-    margin: 0;
-    padding: 0;
-   }
-
-html {
-        font-size: 62.5%;
-}
-
+@import "fuentes";
+@import "general";
+@import "header";
+@import "index";
+@import "footer";
 /* Mobile First 0px-600px*/
 
-body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+/* Elementos de la grilla*/
 
 header {
-    font-size: large;
-    display: grid;
-    justify-content: center;
-    background-color: rgb(208, 9, 9);
-}
-
-h1 a .derechos {
-    color: white;
-}
-
-a {
-    list-style-type: none;
-    text-decoration: none;
-    color: white;
-    font-size: 1.5em;
-}
-
-nav ul {
-    list-style-type: none;
-    background-color: rgb(208, 4, 4);
- }
-
- .navegador a{
-    color: white;
-    text-decoration: none;
-    list-style-type: none;
- }
-
- .nombreLogo {
-    color: white;
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 2em;
- }
-
- .noticiasTitulo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
- }
-
- .partidosTitulo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
- }
-
- .noticias h3 {
-    color: red;
- }
-
- .partidos h3{
-    color: red;
- }
-
- .conteiner h2{
-    color: white;
-    text-align: center;
-    background: rgb(1,6,25);
-    background: radial-gradient(circle, rgba(1,6,25,1) 21%, rgba(14,34,109,1) 41%, rgba(14,34,109,1) 54%, rgba(0,1,15,0.8533788515406162) 86%);
-    padding: 1em;
- }
-
- .noticiasParrafo{
-    border: 2px solid black;
-    background-color: linen;
- }
-
- .vs {
-    margin: auto;
-    height: 15em;
-    width: 20em;
- }
- footer {
-    padding: 3em;
-    background-color: rgb(208, 9, 9);
-    margin-bottom: 0;
-    margin-top: 1.5em;
-    color: white;
- }
-
- h3 {
-    padding-top: 0.5em;
- }
-
-
- /* Elementos de la grilla*/
-
- header {
     grid-area: header;
 }
 
@@ -143,31 +42,6 @@ footer {
     "noticias"
     "partidos"
     "footer";
-}
-
-.conteiner {
-    justify-content: center;
-}
-
-
-.noticiasParrafo img {
-    width: 300px;
-    height: 180px;
-    padding: 10px;
-}
-
-.partidos img {
-    margin: auto;
-    width: 25em;
-    height: 13em;
-    padding: 10px;
-}
-
-.carousel {
-    padding: 3em;
-}
-.carousel-item{
-    border: solid blue;
 }
 
 /* Estilos elclub */
@@ -605,10 +479,10 @@ footer {
     .mapa{
         margin-bottom: 15em;
     }
-     /*Estilos Futbol*/
-     .grillaFutbol{
+    /*Estilos Futbol*/
+    .grillaFutbol{
         grid-template-columns: 1fr 2fr
-     }
+    }
 
     
     .fefi {
@@ -623,13 +497,3 @@ footer {
         height: 300px;
     }
 }
-
-
-
-
-
-
-
-
-
-

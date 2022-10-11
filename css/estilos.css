@@ -1,0 +1,514 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  font-size: large;
+  display: grid;
+  justify-content: center;
+  background-color: rgb(208, 9, 9);
+}
+
+a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+a .nombreLogo {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+ul {
+  list-style-type: none;
+  background-color: rgb(208, 4, 4);
+}
+ul a {
+  list-style-type: none;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+}
+
+.conteiner {
+  justify-content: center;
+}
+.conteiner h2 {
+  color: white;
+  text-align: center;
+  background: rgb(1, 6, 25);
+  background: radial-gradient(circle, rgb(1, 6, 25) 21%, rgb(14, 34, 109) 41%, rgb(14, 34, 109) 54%, rgba(0, 1, 15, 0.8533788515) 86%);
+  padding: 1em;
+}
+
+.carousel {
+  padding: 3em;
+}
+
+.carousel-item {
+  border: solid blue;
+}
+
+.noticiasTitulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.noticiasTitulo h3 {
+  color: red;
+  padding-top: 0.5em;
+}
+
+.noticiasParrafo {
+  border: 2px solid black;
+  background-color: linen;
+}
+.noticiasParrafo img {
+  width: 300px;
+  height: 180px;
+  padding: 10px;
+}
+
+.partidosTitulo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.partidosTitulo h3 {
+  color: red;
+  padding-top: 0.5em;
+}
+
+.vs {
+  margin: auto;
+  height: 15em;
+  width: 20em;
+}
+.vs img {
+  margin: auto;
+  width: 25em;
+  height: 13em;
+  padding: 10px;
+}
+
+footer {
+  padding: 3em;
+  background-color: rgb(208, 9, 9);
+  margin-bottom: 0;
+  margin-top: 1.5em;
+  color: white;
+}
+footer .derechos {
+  color: white;
+}
+
+/* Mobile First 0px-600px*/
+/* Elementos de la grilla*/
+header {
+  grid-area: header;
+}
+
+nav {
+  grid-area: nav;
+}
+
+.conteiner {
+  grid-area: portada;
+}
+
+.noticias {
+  grid-area: noticias;
+}
+
+.partidos {
+  grid-area: partidos;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.grilla {
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 2em;
+  display: grid;
+  grid-template-areas: "header" "nav" "portada" "noticias" "partidos" "footer";
+}
+
+/* Estilos elclub */
+.borde {
+  border: 0.5em solid black;
+  padding: 1em;
+}
+
+.historia {
+  margin: 1em;
+  grid-area: historia;
+}
+
+.actualidad {
+  margin: 1em;
+  grid-area: actualidad;
+}
+
+.uniforme {
+  margin: 1em;
+  grid-area: uniforme;
+}
+
+.grillaClub {
+  margin: 1em;
+  display: grid;
+  grid-template-areas: "header" "nav" "historia" "actualidad" "uniforme" "footer";
+}
+
+/*Estilos de futbol*/
+.fefi {
+  grid-area: fefi;
+}
+
+.tabla {
+  grid-area: tabla;
+}
+
+.grillaFutbol {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: "header" "nav" "fefi" "tabla" "footer";
+}
+
+.fefi {
+  padding: 2em;
+  height: 15em;
+}
+
+.tabla {
+  padding: 2em;
+  height: 20em;
+}
+
+/*Estilos Galeria*/
+.tituloGaleria {
+  grid-area: titulo;
+}
+
+.galeriaGrid {
+  grid-area: galeria;
+}
+
+.grillaGaleria {
+  display: grid;
+  grid-template-areas: "header" "nav" "titulo" "galeria" "footer";
+}
+
+.tituloGaleria {
+  padding: 1em;
+  font-size: 2em;
+}
+
+.galeriaPadre {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px;
+  justify-items: center;
+}
+
+.galeriaPadre img {
+  width: 300px;
+  height: 300px;
+  border: 5px solid blue;
+  margin-top: 10px;
+}
+
+/*Estilos Contacto*/
+.mapa {
+  margin: auto;
+  padding: 1em;
+  grid-area: mapa;
+  height: 425px;
+}
+
+.contacto {
+  padding: 1em;
+  grid-area: contacto;
+}
+
+.formulario {
+  padding: 1em;
+  grid-area: formulario;
+}
+
+.grillaContacto {
+  display: grid;
+  grid-template-areas: "header" "nav" "contacto" "formulario" "mapa" "footer";
+}
+
+@media (min-width: 600px) {
+  .grilla {
+    margin: 0;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "header   header" "nav      nav" "portada  portada" "noticias partidos" "footer   footer";
+  }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0.5em;
+  }
+  .conteiner img {
+    width: 550px;
+    height: 350px;
+    border: 6px solid rgb(8, 32, 139);
+  }
+  .redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .derechos {
+    font-size: 10px;
+  }
+  .noticias {
+    padding: 2em;
+  }
+  .noticiasTitulo {
+    justify-content: space-between;
+  }
+  .noticias h4 {
+    padding-top: 2px;
+  }
+  .noticias p {
+    padding: 1em;
+  }
+  .partidos {
+    margin-top: 2em;
+    padding: 1em;
+  }
+  .partidos h3 {
+    font-size: 0.5em;
+    padding-top: 2em;
+  }
+  .vs {
+    padding-left: 0;
+    height: 0;
+  }
+  .vs img {
+    width: 235px;
+    height: 170px;
+  }
+  /*Estilos elclub*/
+  .grillaClub {
+    margin: 0;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "header   header" "nav      nav" "historia historia" "actualidad uniforme" "footer   footer";
+  }
+  /*Estilos de Galeria*/
+  .galeriaPadre {
+    background: rgb(1, 6, 25);
+    background: radial-gradient(circle, rgb(1, 6, 25) 21%, rgb(14, 34, 109) 41%, rgb(14, 34, 109) 54%, rgba(0, 1, 15, 0.8533788515) 86%);
+  }
+  .galeriaPadre img {
+    border: 5px solid white;
+    margin-top: 10px;
+    width: 350px;
+    height: 350px;
+  }
+}
+@media (min-width: 768px) {
+  .grilla {
+    margin: 0;
+    grid-template-areas: "header      header" "nav         nav" "portada     portada" "noticias    partidos" "footer      footer";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0fr 0fr 1fr 1fr 0.5fr;
+  }
+  .conteiner img {
+    width: 700px;
+    height: 450px;
+    border: 8px solid rgb(8, 32, 139);
+  }
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-bottom: 0;
+  }
+  li {
+    display: flex;
+  }
+  .navegador a {
+    list-style-type: none;
+    padding: 0.5em;
+  }
+  a {
+    padding: 0;
+  }
+  .nombreLogo {
+    font-size: 1em;
+  }
+  .partidos h3 {
+    font-size: 1em;
+  }
+  .noticiasTitulo {
+    padding-bottom: 2em;
+  }
+  .partidos h2 {
+    padding-top: 1em;
+  }
+  .noticiasParrafo {
+    padding: 10px;
+  }
+  .partidosTitulo {
+    padding-bottom: 2em;
+  }
+  .vs {
+    padding: 1em;
+    height: 0;
+  }
+  .vs img {
+    padding-left: 2em;
+  }
+  /*Estilos de futbol*/
+  .grillaFutbol {
+    display: grid;
+    grid-template-areas: "header      header" "nav         nav" "fefi     tabla" "footer      footer";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 0fr 0fr 1fr 0.5fr;
+  }
+  /*Estilos de Galeria*/
+  .galeriaPadre {
+    background: none;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 10px;
+  }
+  .galeriaPadre img {
+    border: 5px solid blue;
+    margin-top: 10px;
+    width: 250px;
+    height: 250px;
+  }
+  iframe {
+    width: 300px;
+    height: 250px;
+  }
+  /*Estilos de Contacto*/
+  .grillaContacto {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: "header     header" "nav        nav" "contacto   mapa" "formulario mapa" "footer     footer";
+  }
+}
+@media (min-width: 1024px) {
+  .grilla {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas: "header      header" "nav         nav" "portada     portada" "noticias    partidos" "footer      footer";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  header {
+    justify-content: flex-start;
+  }
+  .conteiner img {
+    width: 1000px;
+    height: 500px;
+    border: 10px solid rgb(8, 32, 139);
+  }
+  .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-left: 2em;
+  }
+  .nombreLogo {
+    font-size: 1em;
+    color: white;
+    padding-top: 13px;
+    padding-left: 8px;
+  }
+  .vs img {
+    width: 220px;
+    height: 190px;
+  }
+  .efecto img:hover {
+    transform: scale(1.5);
+    transition: 2s;
+  }
+  /*Estilos de Galeria*/
+  .galeriaPadre {
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    gap: 15px;
+  }
+  .galeriaPadre img {
+    border: 5px solid blue;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  .galeriaPadre img:hover {
+    transform: scale(1.3);
+    transition: 2s;
+  }
+  .galeriaGrid {
+    background-color: rgb(208, 9, 9);
+  }
+  .galeriaPadre {
+    background: rgb(1, 6, 25);
+    background: radial-gradient(circle, rgb(1, 6, 25) 21%, rgb(14, 34, 109) 41%, rgb(14, 34, 109) 54%, rgba(0, 1, 15, 0.8533788515) 86%);
+  }
+  iframe {
+    width: 450px;
+    height: 350px;
+  }
+  /*Estilos de Contacto*/
+  .grillaContacto {
+    color: white;
+    background: rgb(1, 6, 25);
+    background: radial-gradient(circle, rgb(1, 6, 25) 21%, rgb(14, 34, 109) 41%, rgb(14, 34, 109) 54%, rgba(0, 1, 15, 0.8533788515) 86%);
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-template-areas: "header     header" "nav        nav" "mapa       contacto" "mapa       formulario" "footer     footer";
+  }
+  .mapa {
+    margin-bottom: 15em;
+  }
+  /*Estilos Futbol*/
+  .grillaFutbol {
+    grid-template-columns: 1fr 2fr;
+  }
+  .fefi {
+    margin: auto;
+  }
+  .tabla {
+    margin: 0;
+    padding-bottom: 2em;
+  }
+  .tabla img {
+    width: 600px;
+    height: 300px;
+  }
+}/*# sourceMappingURL=estilos.css.map */
