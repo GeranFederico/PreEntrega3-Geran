@@ -3,6 +3,12 @@
 @import "header";
 @import "index";
 @import "footer";
+
+@mixin size ($width, $height){
+    height: $height;
+    width: $width;
+}
+
 /* Mobile First 0px-600px*/
 
 /* Elementos de la grilla*/
@@ -239,9 +245,8 @@ footer {
         height: 0;
     }
 
-    .vs img {
-        width: 235px;
-        height: 170px;
+    .vs img { 
+        @include size(235px,170px);
     }
     
     /*Estilos elclub*/
@@ -313,7 +318,7 @@ footer {
     }
 
     .partidos h3 {
-        font-size: 1em;
+        @extend .nombreLogo;
     }
     .noticiasTitulo {
         padding-bottom: 2em;
@@ -332,10 +337,10 @@ footer {
     .vs {
         padding: 1em;
         height: 0;
-     }
-     .vs img {
+    }
+    .vs img {
         padding-left: 2em;
-     }
+    }
 
     /*Estilos de futbol*/
     .grillaFutbol {
@@ -366,8 +371,7 @@ footer {
     }
 
     iframe {
-        width: 300px;
-        height: 250px;
+        @include size(300px,250px);
     }
 
     /*Estilos de Contacto*/
@@ -422,17 +426,16 @@ footer {
 
 
     .vs img {
-        width: 220px;
-        height: 190px;
+        @include size(220px,190px);
     }
 
     .efecto img:hover {
         transform: scale(1.5);
         transition: 2s;
-     }
+    }
 
-     /*Estilos de Galeria*/
-     .galeriaPadre {
+    /*Estilos de Galeria*/
+    .galeriaPadre {
         display: grid;
         grid-template-columns: 2fr 2fr 2fr;
         gap: 15px;
@@ -447,7 +450,7 @@ footer {
     .galeriaPadre img:hover {
         transform: scale(1.3);
         transition: 2s;
-     }
+    }
 
     .galeriaGrid {
         background-color: rgb(208, 9, 9);
@@ -458,8 +461,7 @@ footer {
     }
 
     iframe {
-        width: 450px;
-        height: 350px;
+        @include size(450px,350px);
     }
 
     /*Estilos de Contacto*/
@@ -493,7 +495,6 @@ footer {
         padding-bottom: 2em;
     }
     .tabla img {
-        width: 600px;
-        height: 300px;
+        @include size(600px,300px);
     }
 }
